@@ -24,7 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:maxLines="1"
-        android:inputType="text"
+        android:inputType="textCapSentences"
         android:singleLine="true"
         android:imeOptions="actionDone"
         android:hint="@string/edit_text_type_todo"
