@@ -2,4 +2,4 @@
 - A simple Android Todo List made using Kotlin language.
 
 ## Demo:
-<img src="https://i.imgur.com/Ig91Jh2.gif" alt="app-gif" />
+<img src="https://i.imgur.com/UKlKhdx.gif" alt="app-gif" />
