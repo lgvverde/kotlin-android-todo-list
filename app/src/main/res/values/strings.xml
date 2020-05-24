@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Todo List</string>
     <string name="filter_title">Select a filter</string>
+    <string name="edit_text_type_todo">Type your todo here</string>
+    <string name="btn_add">Add</string>
     <string-array name="filter_options">
         <item>All</item>
         <item>Active</item>
