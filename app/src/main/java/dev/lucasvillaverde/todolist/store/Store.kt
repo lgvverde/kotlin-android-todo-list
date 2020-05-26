@@ -1,6 +1,6 @@
-package com.example.todolist.store
+package dev.lucasvillaverde.todolist.store
 
-import com.example.todolist.models.Action
+import dev.lucasvillaverde.todolist.models.Action
 import androidx.arch.core.util.Function
 
 interface Store<T> {

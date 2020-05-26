@@ -1,4 +1,4 @@
-package com.example.todolist.store
+package dev.lucasvillaverde.todolist.store
 
 import androidx.lifecycle.LiveData
 

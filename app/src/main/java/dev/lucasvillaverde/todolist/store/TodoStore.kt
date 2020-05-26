@@ -1,14 +1,18 @@
-package com.example.todolist.store
+package dev.lucasvillaverde.todolist.store
 
 import androidx.arch.core.util.Function
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.todolist.models.*
+import dev.lucasvillaverde.todolist.models.*
 
 class TodoStore : Store<TodoModel>, ViewModel() {
     private val state: MutableLiveData<TodoModel> = MutableLiveData()
-    private val initState = TodoModel(listOf(), Visibility.All())
+    private val initState = TodoModel(
+        listOf(),
+        Visibility.All()
+    )
 
     override fun dispatch(action: Action) {
         state.value = reduce(state.value, action)

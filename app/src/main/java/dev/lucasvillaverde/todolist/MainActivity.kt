@@ -1,26 +1,31 @@
-package com.example.todolist
+package dev.lucasvillaverde.todolist
 
 import android.os.Bundle
-import android.view.Display
 import androidx.appcompat.app.AppCompatActivity
 import androidx.arch.core.util.Function
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.todolist.adapter.TodoAdapter
+import com.example.todolist.R
+import dev.lucasvillaverde.todolist.adapter.TodoAdapter
 import com.example.todolist.models.*
-import com.example.todolist.store.Renderer
-import com.example.todolist.store.TodoStore
+import dev.lucasvillaverde.todolist.models.*
+import dev.lucasvillaverde.todolist.store.Renderer
+import dev.lucasvillaverde.todolist.store.TodoStore
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.selector
 
 
-class MainActivity : AppCompatActivity(), Renderer<TodoModel> {
+class MainActivity : AppCompatActivity(),
+    Renderer<TodoModel> {
     private lateinit var store: TodoStore
 
     override fun render(model: LiveData<TodoModel>) {
         model.observe(this, Observer { newState ->
-            listView.adapter = TodoAdapter(this, newState?.todos ?: listOf())
+            listView.adapter = TodoAdapter(
+                this,
+                newState?.todos ?: listOf()
+            )
         })
     }
 
@@ -36,7 +41,8 @@ class MainActivity : AppCompatActivity(), Renderer<TodoModel> {
             etTodo.text = null
         }
         fab.setOnClickListener { openDialog() }
-        listView.adapter = TodoAdapter(this, listOf())
+        listView.adapter =
+            TodoAdapter(this, listOf())
         listView.setOnItemClickListener { _, _, _, id ->
             store.dispatch(ToggleTodo(id))
         }

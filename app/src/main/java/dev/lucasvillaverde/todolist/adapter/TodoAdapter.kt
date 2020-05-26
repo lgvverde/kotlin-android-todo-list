@@ -1,4 +1,4 @@
-package com.example.todolist.adapter
+package dev.lucasvillaverde.todolist.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.example.todolist.R
-import com.example.todolist.models.Todo
+import dev.lucasvillaverde.todolist.models.Todo
 import kotlinx.android.synthetic.main.todo_item.view.*
 
 class TodoAdapter(context: Context, val todos: List<Todo>) :

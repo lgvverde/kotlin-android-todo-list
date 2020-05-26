@@ -1,4 +1,4 @@
-package com.example.todolist.models
+package dev.lucasvillaverde.todolist.models
 
 sealed class Action
 
